@@ -1,4 +1,8 @@
+server:
+  shutdown: graceful
 spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
   datasource:
     url: jdbc:mariadb://${prodDbIp}:${prodDbPort}/${prodDbName}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
     username: ${prodDbId}
